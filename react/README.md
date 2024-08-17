@@ -1,50 +1,24 @@
-# React + TypeScript + Vite
+# Senior React Project: Live Coding Session
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Overview
 
-Currently, two official plugins are available:
+This project is designed to demonstrate a senior-level understanding of modern React development practices using TypeScript, MUI, Zustand, React Query, Zod, and React Hook Form. The live coding session will focus on building a fully functional, high-performance, and type-safe application.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies Used
 
-## Expanding the ESLint configuration
+- **React**: A JavaScript library for building user interfaces.
+- **TypeScript**: A statically typed superset of JavaScript that adds type safety to the project.
+- **MUI (Material-UI)**: A popular React UI framework for creating sleek and responsive user interfaces.
+- **Zustand**: A small, fast, and scalable state management solution for React.
+- **React Query**: A data-fetching library that simplifies server-state management in React.
+- **React Hook Form**: A library for building flexible and efficient forms in React.
+- **Zod**: A TypeScript-first schema declaration and validation library.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Features
 
-- Configure the top-level `parserOptions` property like this:
+- **Type-Safe State Management**: Using Zustand for managing application state with TypeScript.
+- **Data Fetching and Caching**: Leveraging React Query for efficient and optimized server-state management.
+- **Form Handling**: Building forms with React Hook Form and ensuring data integrity with Zod for validation.
+- **Responsive UI**: Utilizing MUI to create a visually appealing and mobile-friendly user interface.
+- **Schema Validation**: Integrating Zod to ensure type-safe data structures throughout the application.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
